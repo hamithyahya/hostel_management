@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="index.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <!--<img src="logo.png" alt="">-->
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Hostel</span>
+                    <span class="profession">Accomodation</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="html_sapphire.html">
+                            <i class='bx bx-buildings' ></i>
+                            <span class="text nav-text">Sapphire</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="html_emerald.html">
+                            <i class='bx bx-building-house' ></i>
+                            <span class="text nav-text">Emerald</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-diamond'></i>
+                            <span class="text nav-text">Diamond</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home' ></i>
+                            <span class="text nav-text">Ruby</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-smile' ></i>
+                            <span class="text nav-text">pearl</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-building' ></i>
+                            <span class="text nav-text">Coral</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjB7IOE6rb6AhVJEnAKHTBYDN4QFnoECBIQAQ&url=https%3A%2F%2Faccounts.google.com%2F&usg=AOvVaw33vbO0yD5ue-bN0tdaehNC">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text">Dashboard</div>
+    </section>
+
+    <div class="box1">
+            Total number of rooms is 340
+    </div>
+    <div class="box2">
+            Total number of rooms
+    </div>
+    <div class="box3">
+            Total number of rooms  
+    </div>
+    <div class="box4">
+            Total number of rooms
+    </div>
+    <div class="box5">
+            Total number of rooms    
+    </div>
+    <div class="box6">
+            Total number of rooms
+    </div>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }
+    else{
+        modeText.innerText = "Dark mode";
+        
+        
+    }
+});
+    </script>
+
+</body>
+</html>
